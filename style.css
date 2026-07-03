@@ -1,8 +1,28 @@
 h1{
     text-align:center;
-    color:bisque;
+    color:rgb(244, 154, 207);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
-#task-input:hover{
-background-color:rgb(107, 107, 240)
+h1:hover{
+    color:rgb(120, 120, 242)
+}
+#task-input{
+margin:20px;
+margin-left:50px;
+padding:10px;
+border:2px solid black;
+border-radius: 3px;
+max-width: 700px;
+}
+#add-btn{
+    padding-left:8px; 
+    padding-right:8px; 
+    color:rgb(253, 153, 153)
+}
+#add-btn:hover{
+    background-color:white;
+    border : 1px solid black;
+    border-radius:2px;
+
 }
