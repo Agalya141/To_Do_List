@@ -8,11 +8,11 @@ h1:hover{
     color:rgb(120, 120, 242)
 }
 #task-input{
-margin:20px;
-margin-left:50px;
+margin:20px auto;
 padding:10px;
 border:2px solid black;
 border-radius: 3px;
+width:100%;
 max-width: 700px;
 }
 #add-btn{
@@ -21,8 +21,49 @@ max-width: 700px;
     color:rgb(253, 153, 153)
 }
 #add-btn:hover{
-    background-color:white;
+    background-color:rgb(243, 227, 227);
     border : 1px solid black;
     border-radius:2px;
-
+     cursor:auto;
+}
+body{
+    background-color:#eaf2fb; ;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+#todolist{
+     list-style: none;
+     padding:0;
+}
+#todolist li{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:10px 15px;
+    margin-bottom:7px;
+    border: 2px solid rgb(244, 154, 207);
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#todolist li.completed{
+    text-decoration: line-through;
+    color:black;
+    border-color: lightgray;
+    background-color: #f5f5f5;
+}
+.del-btn{
+    border:none;
+    background:none;
+    color: rgb(120, 120, 242);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 8px;
+}
+del-btn:hover{
+    background-color: antiquewhite;
+}
+todolist li{
+    cursor:pointer;
+    background-color: rgb(243, 227, 227); 
 }
