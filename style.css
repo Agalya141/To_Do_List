@@ -11,8 +11,8 @@ body {
 }
 
 #Tasks {
-  width: 100%;
-  max-width: 400px;
+    width: 100%;
+    max-width: 400px;
 }
 
 h1 {
@@ -132,7 +132,7 @@ h1:hover {
     font-family: 'Segoe UI', Arial, sans-serif;
     padding: 6px 14px;
     background-color: white;
-    color:  #e15b5b; 
+    color: #e15b5b;
     border: 1.5px solid #d7eaec;
     border-radius: 6px;
     font-size: 13px;
@@ -155,47 +155,47 @@ h1:hover {
 }
 
 .result {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .todo-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 4px;
-  background-color: transparent;
-  border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 4px;
+    background-color: transparent;
+    border-bottom: 1px solid black;
 }
 
 .todo-name {
-  flex: 1;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  color: #2d3a5a;
+    flex: 1;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2d3a5a;
 }
 
 .todo-date {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  font-size: 13px;
-  color: #141415;
-  background-color: transparent;
-  padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 13px;
+    color: #141415;
+    background-color: transparent;
+    padding: 0;
 }
 
 .todo-date::before {
-  content: "📅";
-  margin-right:8px;
+    content: "📅";
+    margin-right: 8px;
 }
 
 .todo-name.done {
-  text-decoration: line-through;
-  color: #9aa5b8;
+    text-decoration: line-through;
+    color: #9aa5b8;
 }
 
 .todo-row input[type="checkbox"] {
-  accent-color: #8e5bd6;
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
+    accent-color: #8e5bd6;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
 }
