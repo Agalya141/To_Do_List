@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>To Do List</title>
 </head>
@@ -15,6 +16,7 @@
     <p class="quote">Small steps every day.</p>
     <div id="Tasks">
         <input type="text" id="task-input" placeholder="Your tasks" onkeydown="handletodokey(event)">
+        <p id="error-msg"></p>
         <input type="date" id="js-due-date-input">
         <button id="add-btn" onclick="addTodo()">ADD</button>
         <div class="result"></div>

@@ -8,7 +8,7 @@ function renderTodolist() {
         const html = `<div class="todo-row">
         <input type="checkbox" class="done-checkbox" onchange="toggleDone(${i})" ${done ? 'checked' : ''}>
         <span class="todo-name ${done ? 'done' : ''}"> ${name} </span>
-        <span class="todo-date"> ${dueDate} </span>
+        ${dueDate ? `<span class="todo-date"> ${dueDate} </span>` : ''}
         <button class = "del-btn" onclick="deleteTodo(${i})">DELETE</button>
         </div>`;
         todolistHTML += html;
@@ -20,14 +20,17 @@ function addTodo() {
     const inputElement = document.querySelector('#task-input');
     const dateInputElement = document.querySelector('#js-due-date-input');
     const dueDate = dateInputElement.value;
-    const name = inputElement.value;
+    const name = inputElement.value.trim();
     if (name === '') {
-        alert("Please type a task first!");
+        document.querySelector('#error-msg').textContent = 'Please enter a task name.';
         return;
     }
+    document.querySelector('#error-msg').textContent = ''
+
     todolist.push({ name, dueDate, done: false });
     saveToStorage();
     inputElement.value = '';
+    dateInputElement.value = '';
     renderTodolist();
 }
 
@@ -38,7 +41,7 @@ function toggleDone(i) {
 
 }
 
-function deleteTodo(i){
+function deleteTodo(i) {
     todolist.splice(i, 1);
     saveToStorage();
     renderTodolist();

@@ -77,6 +77,24 @@ h1:hover {
     box-shadow: 0 0 6px rgba(142, 91, 214, 0.4);
 }
 
+#error-msg {
+    color: #d6627a;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    text-align: left;
+    margin: -12px 0 10px 0;
+}
+
+#error-msg::before {
+    content: "↑";
+    margin-right: 6px;
+}
+
+#error-msg:empty {
+    display: none;
+}
+
 #js-due-date-input {
     padding: 5px;
     border-radius: 3px;
