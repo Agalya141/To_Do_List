@@ -6,16 +6,27 @@ function renderTodolist() {
         const todoObject = todolist[i];
         const { name, dueDate, done } = todoObject;
         const html = `<div class="todo-row">
-        <input type="checkbox" class="done-checkbox" onchange="toggleDone(${i})" ${done ? 'checked' : ''}>
-        <span class="todo-name ${done ? 'done' : ''}"> ${name} </span>
+        <input type="checkbox" class="done-checkbox" 
+        onchange="toggleDone(${i})" ${done ? 'checked' : ''}>
+        <span class="todo-name ${done ? 'done' : ''}">
+        ${name} </span>
         ${dueDate ? `<span class="todo-date"> ${dueDate} </span>` : ''}
-        <button class = "del-btn" onclick="deleteTodo(${i})">DELETE</button>
+        <button class = "del-btn">DELETE</button>
         </div>`;
         todolistHTML += html;
     }
     document.querySelector('.result').innerHTML = todolistHTML;
+    document.querySelectorAll('.del-btn').forEach((deleteButton, index) => {
+        deleteButton.addEventListener('click', () => {
+            deleteTodo(index)
+        })
+
+    });
 }
 
+document.querySelector('#add-btn').addEventListener('click', () => {
+    addTodo();
+})
 function addTodo() {
     const inputElement = document.querySelector('#task-input');
     const dateInputElement = document.querySelector('#js-due-date-input');
